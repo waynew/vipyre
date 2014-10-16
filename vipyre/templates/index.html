@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='vi.js') }}"></script>
+    <style>
+        * {
+            background-color: #222;
+            color: #aaa;
+        }
+
+        #editor {
+            border: none;
+            color: #aaa;
+            top: 0px;
+            bottom: 0px;
+            height: 90%;
+            /*overflow: hidden;*/
+        }
+
+        #mode {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+        }
+
+        #debug {
+            position: absolute;
+            top: auto;
+            bottom: 1em;
+            left: 1em;
+        }
+    </style>
+</head>
+<body>
+    <span id="mode">normal</span>
+    <span id="debug"></span>
+    <textarea id="editor" style="width: 80%; margin-left: 10%; font-family: monospace;">
+    </textarea>
+    <script>
+        vi.editor('#editor');
+    </script>
+</body>
+</html>
